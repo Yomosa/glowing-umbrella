@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+}
+
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  width: 500px;
+  height: 150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.inputBox {
+  display: flex;
+  margin: 0 50px;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+.inputText {
+  background: none;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  font-size: 1em;
+  padding: 10px;
+  color: whitesmoke;
+  position: relative;
+  z-index: 2;
+}
+
+.label {
+  position: absolute;
+  transition: 0.2s;
+  pointer-events: none;
+  padding: 10px 0;
+}
+
+.container .inputBox .inputText:focus ~ .label,
+.container .inputBox .inputText:valid ~ .label {
+    font-size: 0.85rem;
+    transform: translateY(-35px);
+}
+
+.container .inputBox .inputBack {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+.container .inputBox .inputText:focus ~ .inputBack,
+.container .inputBox .inputText:valid ~ .inputBack {
+    height: 100%;
+}

@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+}
+
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #61e5ef 75%,
+    #4cf09b 100%
+  );
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+    width: 800px;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 150px;
+}
+
+a {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+    color: #fafafa;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: 0.5s;
+    padding: 20px 40px;
+}
+a:hover {
+    border: 2px solid whitesmoke
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    inset: 8px 0;
+    border-bottom: 2px solid whitesmoke;
+    border-top: 2px solid whitesmoke;
+    transition: 1s;
+}
+
+
+a::after {
+    content: "";
+    position: absolute;
+    inset: 0 8px;
+    border-right: 2px solid whitesmoke;
+    border-left: 2px solid whitesmoke;
+    transition: 1s;
+}
+
+a.btn1:hover::before {
+    inset: 8px 16px;
+}
+
+a.btn1:hover::after {
+    inset: 16px 8px;
+}
+
+a.btn2:hover::before {
+    transform: rotateY(180deg);
+}
+
+a.btn2:hover::after {
+    transform: rotateX(180deg);
+}
+
+a.btn3:hover::before {
+    inset: -12px 0;
+    transform: skewX(15deg);
+}
+
+a.btn3:hover::after {
+    inset: 0 -12px;
+    transform: skewY(15deg);
+}
+
+a.btn4:hover {
+    border: 2px solid transparent;
+}
+
+a.btn4:hover::before {
+    inset: 10px 0;
+    transition: skew(-25deg);
+}
+
+a.btn4:hover::after {
+    inset: 0 30px;
+    transform: skew(25deg);
+}
+
+a.btn5:hover::before {
+    inset: 0 0;
+}
+
+a.btn5:hover::after {
+    inset: 0 0;
+}
+
+a.btn5:hover {
+    border: 2px solid transparent;
+}
+
+a.btn6:hover::before {
+    inset: -8px ;
+    transform: skewX(-15deg) skewY(5deg);
+}
+
+a.btn6:hover::after {
+    inset:  -8px;
+    transform: skewY(-15deg) skewX(5deg);
+}
+
+a.btn6:hover {
+    border: 2px solid transparent;
+}

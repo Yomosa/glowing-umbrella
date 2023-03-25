@@ -1,0 +1,81 @@
+* {
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 70vw;
+}
+
+.content > * {
+  width: calc(100% - 25px);
+  padding: 25px;
+}
+
+.header {
+  background-color: whitesmoke;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header .title h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 3rem;
+}
+
+.header .title i {
+    border: 5px solid black;
+    width: 50%;
+}
+
+.header .title .desc {
+    font-size: 1.5rem;
+}
+
+.header .social {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.header .social .icon {
+    width: 25px;
+    height: 25px;
+}
+
+.carousel {
+  background-color: aqua;
+  height: 300px;
+}
+
+.product {
+  background-color: brown;
+  height: 250px;
+}
+
+.footer {
+  background-color: chocolate;
+  height: 250px;
+}
